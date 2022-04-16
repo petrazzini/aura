@@ -1,0 +1,135 @@
+
+:root{
+    --functional-dark-darkest: #0E131B;
+    --functional-light-light: #DDE4EE;
+    --functional-light-lightest: #F2F4F8;
+}
+
+body, h1, h2, h3, p, div, a{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: helvetica, arial, sans-serif;
+    height: 100vh;
+    color: var(--functional-dark-darkest);
+}
+
+.brand-icon{
+    stroke: var(--functional-dark-darkest);
+    stroke-width: 1.4px;
+    stroke-linecap: round;
+    stroke-linejoin: bevel;
+}
+.header{
+    display: flex;
+    width: calc(100% - 112px);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 56px;
+    max-height: 152px;
+    position: absolute;
+    overflow-wrap: normal;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.content img{
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotatey(0deg);
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotatey(360deg);
+    }
+}
+
+
+/* Button */
+
+.button .action{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    cursor: pointer;
+}
+.button .label{
+    height: 72px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--functional-light-lightest);
+    color: var(--functional-dark-darkest);
+    width: fit-content;
+    border-radius: 80px;
+    overflow: hidden;
+}
+.button .icon{
+    height: 72px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--functional-light-lightest);
+    color: var(--functional-dark-darkest);
+    border-radius: 80px;
+    overflow: hidden;
+}
+.button .action .first{
+    transition: ease-in-out .3s;
+}
+.button .action .label{
+    transform: translate(0px);
+    transition: ease-in-out .3s;
+}
+.button .action .last{
+    transform: scale(0.001%);
+    opacity: 0%;
+    transition: ease-in-out .3s;
+}
+
+.button .action:hover .first{
+    transform: scale(0%);
+    opacity: 0;
+    transition: ease-in-out .3s;
+
+}
+.button .action:hover .last{
+    transform: scale(100%);
+    opacity: 100%;
+    transform: translate(-72px);
+    transition: ease-in-out .3s;
+}
+
+.button .action:hover .label{
+    transform: translate(-72px);
+    transition: ease-in-out .3s;
+}
+.button .action:hover .label, .action:hover .icon{
+  background-color: var(--functional-light-light);
+  color: var(--functional-dark-darkest);
+}
+
+.button .action:active .label, .button .action:active .last{
+    background-color: var(--functional-light-light);
+    color: var(--functional-dark-darkest);
+}
+
+
