@@ -154,5 +154,11 @@ body{
     .button .icon{
         display: none;
     }
+    .button .action:hover .label{
+        transform: scale(100%);
+        opacity: 100%;
+        transform: translate(0px);
+        transition: ease-in-out .3s;
+    }
 
 }
