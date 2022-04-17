@@ -143,6 +143,9 @@ body{
         padding: 24px;
         flex-direction: column;
         align-items: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
     }
     .header p{
         margin-top: 32px;
@@ -155,7 +158,6 @@ body{
         display: none;
     }
     .button .action:hover .label{
-        transform: scale(100%);
         opacity: 100%;
         transform: translate(0px);
         transition: ease-in-out .3s;
